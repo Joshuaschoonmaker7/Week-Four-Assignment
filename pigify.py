@@ -14,20 +14,35 @@ def main():
 # Loop through word, one letter at a time
 
 	n = 0
+	endword = ""
 
 	for letter in word:
+	
+	
 		# Check if letter is a vowel
 		if letter in vowels:
-			# True?  We are done
-			endWord = word +  "yay"
-		else:
-			# False? Consonant
-			n = n + 1
+			
+			if n == 0:
 				
-			endWord = word[n:] + word[:n] + "ay"
-		break
+			# True?  We are done
+			
+				pig = word +  "yay"
+				
+				break
+			
+			else:
+				pig = word[n:] + endword + "ay"
+		
+				break
+				
+				# False? Consonant
+			
+		else:
+			endword = endword + word[n]
+					
+			n = n + 1
 		
 		
-	print(endWord)
+	print(pig)
 	
 main()
